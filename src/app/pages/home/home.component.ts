@@ -41,8 +41,6 @@ export class HomeComponent implements OnInit {
     this.cargarVideos();
   }
 
-
-
   // Cargar servicios desde el servicio
   cargarServicios() {
     this.servicesService.getServicios().subscribe(

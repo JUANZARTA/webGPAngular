@@ -1,1 +1,26 @@
-<p>service-card works!</p>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+    <div *ngFor="let servicio of servicios"
+      class="relative bg-white shadow-md hover:shadow-xl transition-all p-6 rounded-xl border border-gray-200 overflow-hidden w-72 mx-auto">
+
+      <!-- Efecto Decorativo -->
+      <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-yellow-500 to-orange-500"></div>
+
+      <h3 class="text-xl font-bold text-gray-800 mt-2">{{ servicio.nombre }}</h3>
+      <p class="text-gray-600 mt-2">{{ servicio.descripcion }}</p>
+
+      <div class="mt-4 flex justify-center gap-4">
+        <!-- Botón ver mas -->
+        <button mat-raised-button style="color: darkorange; background-color: white;" data-bs-toggle="modal"
+          data-bs-target="#videoModal" (click)="abrirModalVideo(servicio.nombre)">
+          Ver más
+        </button>
+
+        <!-- Botón Planes en cada tarjeta -->
+        <button mat-raised-button style="color: darkorange; background-color: white;"
+          (click)="selectService(servicio)" data-bs-toggle="modal" data-bs-target="#cotizarModal">
+          Planes
+        </button>
+
+      </div>
+    </div>
+  </div>

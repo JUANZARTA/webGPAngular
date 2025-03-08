@@ -1,47 +1,32 @@
 [
   {
     "titulo": "Animación 2D",
-    "descripcion": "Creamos animaciones en 2D de alta calidad para darle vida a tus ideas.",
+    "descripcion": "Dale vida a tus ideas con animaciones 2D dinámicas y creativas. Ofrecemos estilos variados, desde dibujos animados hasta motion graphics, ideales para publicidad, presentaciones y contenido digital.",
     "video": "https://www.youtube.com/watch?v=9w938xLbamY"
   },
   {
     "titulo": "Animación 3D",
-    "descripcion": "Dale una dimensión extra a tus proyectos con nuestras animaciones en 3D.",
+    "descripcion": "Creamos animaciones 3D impactantes y profesionales para darle vida a tus ideas. Con gran nivel de detalle, realismo y fluidez, nuestras animaciones destacarán tu marca en cualquier plataforma.",
     "video": "https://www.youtube.com/watch?v=XQIZrN-RLhg&list=PLNAhQVPdMshncnAlVP9UBLicx1Z_bNaXO&index=7"
   },
   {
     "titulo": "Diseño de Personajes",
-    "descripcion": "Diseñamos personajes únicos y llamativos.",
-    "video": ""
+    "descripcion": "Creamos personajes originales y detallados en diferentes estilos. Desde bocetos hasta modelos finales listos para animación, adaptamos cada diseño para videojuegos, animaciones o branding.",
+    "video": "https://www.youtube.com/watch?v=RgRhkTvIIM4&list=PLNAhQVPdMshkYGLa_LXdBy_6NUsuqwP2f&index=14"
   },
   {
     "titulo": "Modelos 3D",
-    "descripcion": "Realizamos modelado y renderizado de planos en 3D.",
-    "video": ""
+    "descripcion": "Realizamos modelado y renderizado de objetos 3D con alto nivel de detalle. Ideales para videojuegos, arquitectura, productos y animaciones, nuestros modelos garantizan realismo y calidad profesional.",
+    "video": "https://www.youtube.com/watch?v=I0FvPC8WxvA&list=PLNAhQVPdMshncnAlVP9UBLicx1Z_bNaXO&index=8"
   },
   {
-    "titulo": "Planos 2D & 3D Casa",
-    "descripcion": "Diseñamos planos arquitectónicos detallados.",
-    "video": ""
-  },
-  {
-    "titulo": "Diseños",
-    "descripcion": "Diseños gráficos creativos para potenciar tu identidad.",
-    "video": ""
+    "titulo": "Diseños Gráficos",
+    "descripcion": "Creamos diseños gráficos personalizados para múltiples aplicaciones. Desde logotipos hasta banners y redes sociales, ofrecemos creatividad y profesionalismo para destacar tu identidad visual.",
+    "video": "https://www.youtube.com/watch?v=kr_HB_xDCcU&list=PLNAhQVPdMshk5M2l3VryGEJvxlIQa9iTh&index=2"
   },
   {
     "titulo": "Videos Publicitarios",
-    "descripcion": "Producción y edición de videos publicitarios.",
-    "video": ""
-  },
-  {
-    "titulo": "Desarrollo Web",
-    "descripcion": "Creamos aplicaciones web modernas y funcionales.",
-    "video": ""
-  },
-  {
-    "titulo": "Diseño de Página Web",
-    "descripcion": "Diseño atractivo y optimizado para tu sitio web.",
-    "video": ""
+    "descripcion": "Producción y edición de videos promocionales de alta calidad. Contamos con edición profesional, efectos visuales y animaciones para transmitir tu mensaje de forma atractiva e impactante.",
+    "video": "https://www.youtube.com/watch?v=lLoWvRl9BBc&list=PLNAhQVPdMshk5M2l3VryGEJvxlIQa9iTh&index=1"
   }
 ]
