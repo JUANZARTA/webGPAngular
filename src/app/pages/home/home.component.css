@@ -1,0 +1,86 @@
+/* Personaliza los botones del carrusel */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 50px; /* Reduce el tamaño del botón */
+  height: 50px;
+  background: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+  border-radius: 50%; /* Hace los botones redondos */
+  transition: background 0.3s ease-in-out;
+}
+
+/* Cambia el fondo al pasar el mouse */
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background: rgba(255, 255, 255, 0.8); /* Fondo más claro */
+}
+
+/* Ajusta los iconos dentro de los botones */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1); /* Convierte los iconos a blanco */
+  width: 20px;
+  height: 20px;
+}
+/* Contenedor de las tarjetas */
+.servicios-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Estilos de las tarjetas individuales */
+.servicio-card {
+  background: rgb(255, 255, 255);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Efecto hover */
+.servicio-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Títulos dentro de cada tarjeta */
+.servicio-card h3 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #1d1d1d;
+  margin-bottom: 10px;
+}
+
+/* Lista dentro de cada tarjeta */
+.servicio-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.servicio-card li {
+  font-size: 16px;
+  color: #555;
+  padding: 5px 0;
+}
+
+/* Ajustes para móviles */
+@media (max-width: 768px) {
+  .servicios-container {
+    display: flex;
+    flex-direction: column; /* Apila las tarjetas en móviles */
+    align-items: center; /* Centra las tarjetas */
+    gap: 15px;
+  }
+
+  .servicio-card {
+    width: 90%; /* Ocupa casi todo el ancho de la pantalla */
+    max-width: 350px; /* Limita su tamaño en móviles */
+  }
+  body {
+    padding-top: 0 !important;
+  }
+}

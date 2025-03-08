@@ -1,0 +1,195 @@
+<!-- Sección de Inicio -->
+<section class="bg-white py-10 mt-20">
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center">
+
+    <!-- Carrusel de Imágenes en Lugar de Imagen Estática -->
+    <div class="md:w-1/2 relative shadow-lg shadow-gray-900 opaci rounded-lg">
+      <div id="carouselExample" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="2000">
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="4000">
+            <img src="assets/carrusel/carrusel1.jpeg" alt="Imagen 1" class="rounded-lg w-full">
+          </div>
+          <div class="carousel-item" data-bs-interval="4000">
+            <img src="assets/carrusel/carrusel2.jpeg" alt="Imagen 2" class="rounded-lg w-full">
+          </div>
+          <div class="carousel-item" data-bs-interval="4000">
+            <img src="assets/carrusel/carrusel3.jpeg" alt="Imagen 3" class="rounded-lg w-full">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Texto a la Derecha -->
+    <div class="md:w-1/2 text-center md:text-left px-6">
+      <h2 class="text-4xl font-bold text-gray-800">Potenciamos Tu Creatividad</h2>
+      <p class="text-lg text-gray-700 mt-4">
+        En Golden Panda, llevamos la creatividad al siguiente nivel con soluciones innovadoras en diseño, animación y
+        tecnología.
+        Descubre cómo podemos hacer realidad tus ideas.
+      </p>
+      <!-- Botones de Acción -->
+      <div class="mt-6 flex justify-center gap-4">
+        <button mat-raised-button style="color: white; background-color: darkorange;" routerLink="/nosotros">
+          Sobre Nosotros
+        </button>
+        <button mat-raised-button style="color: white; background-color: darkorange;" routerLink="/portafolio">
+          Ver Portafolio
+        </button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Sección de Servicios -->
+<section id="servicios" class="py-10 text-center bg-gray-100 mt-20">
+  <h2 class="text-3xl font-semibold text-gray-800">Nuestros Servicios</h2>
+
+  <!-- Descripción -->
+  <p class="text-lg text-gray-700 max-w-3xl mx-auto mt-4">
+    Ofrecemos soluciones innovadoras para potenciar tu marca y destacar en el mercado.
+    Descubre cómo nuestros servicios pueden transformar tu presencia empresarial.
+    ¡Checa los servicios que brindamos!
+  </p>
+
+  <!-- Contenedor principal con fondo gris y ancho definido -->
+  <div class="flex justify-center py-8">
+    <div class="bg-white px-10 py-8 w-[1000px] rounded-lg shadow-md">
+
+      <!-- Contenedor interno con tarjetas -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div *ngFor="let servicio of servicios"
+          class="relative bg-white shadow-md hover:shadow-xl transition-all p-6 rounded-xl border border-gray-200 overflow-hidden w-72 mx-auto">
+
+          <!-- Efecto Decorativo -->
+          <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-yellow-500 to-orange-500"></div>
+
+          <h3 class="text-xl font-bold text-gray-800 mt-2">{{ servicio.nombre }}</h3>
+          <p class="text-gray-600 mt-2">{{ servicio.descripcion }}</p>
+
+          <div class="mt-4 flex justify-center gap-4">
+            <!-- Botón ver mas -->
+            <button mat-raised-button style="color: darkorange; background-color: white;" data-bs-toggle="modal"
+              data-bs-target="#videoModal" (click)="abrirModalVideo(servicio.nombre)">
+              Ver más
+            </button>
+
+            <!-- Botón Planes en cada tarjeta -->
+            <button mat-raised-button style="color: darkorange; background-color: white;"
+              (click)="selectService(servicio)" data-bs-toggle="modal" data-bs-target="#cotizarModal">
+              Planes
+            </button>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Párrafo adicional antes de la lista -->
+      <p class="text-lg text-gray-700 max-w-3xl mx-auto mt-4">
+        <br> Te mostramos a más detalles los servicios que ofrecesmos para impulsar tu proyecto con soluciones creativas
+        y tecnológicas.
+      </p>
+
+      <!-- Lista de Servicios como tarjetas -->
+      <div class="servicios-container">
+        <div class="servicio-card">
+          <h3>Desarrollo & Multimedia</h3>
+          <ul>
+            <li>Videos Publicitarios</li>
+            <li>Edición de Fotografías</li>
+            <li>Desarrollo de Software</li>
+            <li>Desarrollo de Páginas Web</li>
+          </ul>
+        </div>
+
+        <div class="servicio-card">
+          <h3>Modelado & Animación</h3>
+          <ul>
+            <li>Modelado 3D</li>
+            <li>Animación 2D</li>
+            <li>Modelos 3D</li>
+            <li>Planos 2D & 3D Casa</li>
+          </ul>
+        </div>
+
+        <div class="servicio-card">
+          <h3>Diseño Gráfico</h3>
+          <ul>
+            <li>Diseños Gráficos</li>
+            <li>Diseño de Personajes</li>
+            <li>Diseño de Logos</li>
+            <li>Tarjetas de Presentación</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Modal para mostrar los planes -->
+<div class="modal fade" id="cotizarModal" tabindex="-1" aria-labelledby="cotizarModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg"> <!-- Aquí agregamos modal-lg para hacerlo más ancho -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="cotizarModalLabel">Cotiza tu Proyecto: {{selectedService?.nombre}}</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>{{selectedService?.descripcion}}</p>
+        <h4 class="text-orange fw-bold text-center">Elige el plan que más se ajusta a tus necesidades:</h4>
+
+        <!-- Planes de Trabajo -->
+        <div class="row row-cols-1 row-cols-md-3 g-4 mt-4">
+          <div *ngFor="let plan of selectedService?.planes" class="col">
+            <div class="card border-0 shadow-sm p-3">
+              <h5 class="card-title text-center">{{plan.nombre}}</h5>
+              <p class="text-center">{{plan.descripcion}}</p>
+              <ul class="list-group list-group-flush">
+                <li *ngFor="let detalle of plan.detalles" class="list-group-item">{{detalle}}</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Texto adicional sobre paquetes personalizados -->
+        <p class="text-center text-gray-700 mt-4">
+          <strong>¿Buscas algo más personalizado?</strong>
+          También ofrecemos paquetes únicos adaptados a cada cliente, donde trabajamos bajo su presupuesto en un modelo
+          de colaboración especial.
+        </p>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <a mat-raised-button style="color: white; background-color: darkorange; padding: 10px 20px; border-radius: 5px;"
+          href="/contacto" target="_blank" rel="noopener noreferrer">
+          Me interesa
+        </a>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal para mostrar videos -->
+<div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Ver Video</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div *ngIf="selectedVideo; else noVideo">
+          <iframe class="w-full aspect-video" [src]="selectedVideo" frameborder="0" allowfullscreen>
+          </iframe>
+        </div>
+        <ng-template #noVideo>
+          <p class="text-center text-gray-700">Este servicio no tiene un video disponible.</p>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+</div>

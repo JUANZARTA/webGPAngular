@@ -1,0 +1,60 @@
+footer {
+  text-align: center;
+  background-color: #1a1a1a;
+  padding: 20px 0 0 0; /* Espacio superior, sin espacio inferior */
+  position: relative;
+  min-height: 150px; /* Asegurar espacio suficiente */
+}
+
+footer .container {
+  margin-bottom: 30px; /* Espacio entre el contenido y el "Created by" */
+}
+
+footer a, h5 {
+  text-decoration: none;
+  color: #1a1a1a;
+}
+
+footer p {
+  font-size: 14px;
+  color: #1a1a1a;
+}
+
+footer a i {
+  color: darkorange !important;
+  transition: color 0.3s ease-in-out;
+}
+
+footer a:hover i {
+  color: rgb(216, 86, 0) !important;
+}
+
+/* Hacer que "Created by" esté pegado al borde del footer */
+.created-by {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  padding: 10px 0;
+  font-size: 13px;
+  color: #aaaaaa;
+  background-color: hwb(60 100% 0%); /* Fondo igual al footer */
+}
+/* Ajustes para dispositivos móviles */
+@media (max-width: 768px) {
+  .my-6 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0px; /* Reduce el espacio entre los iconos */
+  }
+
+  footer a {
+    margin: 0 100px; /* Reduce la separación horizontal */
+  }
+
+  footer a i {
+    font-size: 1.8rem; /* Ajusta el tamaño de los iconos para móviles */
+  }
+}

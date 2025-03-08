@@ -1,0 +1,29 @@
+<!-- Sección de Portafolio -->
+<section class="bg-white py-10 mt-20">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-4xl font-bold text-gray-800 text-center mb-10">Nuestro Portafolio</h2>
+
+    <div *ngFor="let proyecto of portafolio; let i = index"
+         class="flex flex-col md:flex-row items-center mb-16"
+         [ngClass]="{ 'md:flex-row-reverse': i % 2 !== 0 }">
+
+      <!-- Video de YouTube -->
+      <div class="md:w-1/2 relative shadow-lg rounded-lg">
+        <iframe class="rounded-lg w-full aspect-video"
+                [src]="proyecto.videoSeguro"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+        </iframe>
+      </div>
+
+      <!-- Texto -->
+      <div class="md:w-1/2 text-center md:text-left px-6">
+        <br>
+        <h3 class="text-3xl font-bold text-gray-800">{{ proyecto.titulo }}</h3>
+        <p class="text-lg text-gray-700 mt-4">{{ proyecto.descripcion }}</p>
+      </div>
+
+    </div>
+  </div>
+</section>

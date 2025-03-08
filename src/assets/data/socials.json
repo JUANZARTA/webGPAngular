@@ -1,0 +1,32 @@
+[
+  {
+    "nombre": "WhatsApp",
+    "icono": "fab fa-whatsapp",
+    "url": "https://wa.me/573128622945"
+  },
+  {
+    "nombre": "Facebook",
+    "icono": "fab fa-facebook",
+    "url": "https://www.facebook.com/profile.php?id=61557062733690"
+  },
+  {
+    "nombre": "Instagram",
+    "icono": "fab fa-instagram",
+    "url": "https://www.instagram.com/golden_panda_6/"
+  },
+  {
+    "nombre": "TikTok",
+    "icono": "fab fa-tiktok",
+    "url": "https://www.tiktok.com/@goldenpanda_6"
+  },
+  {
+    "nombre": "GitHub",
+    "icono": "fab fa-github",
+    "url": "https://github.com/JUANZARTA"
+  },
+  {
+    "nombre": "YouTube",
+    "icono": "fab fa-youtube",
+    "url": "https://www.youtube.com/channel/UCw4rNkcmYE79flslT1aB9RA"
+  }
+]

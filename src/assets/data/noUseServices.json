@@ -1,0 +1,97 @@
+[
+  {
+    "nombre": "Planos 2D & 3D Casa",
+    "descripcion": "Diseñamos planos arquitectónicos detallados.",
+    "planes": [
+      {
+        "nombre": "Básico",
+        "descripcion": "Planos 2D básicos.",
+        "detalles": ["1 plano 2D", "Formato estándar", "Entrega en 3 días"]
+      },
+      {
+        "nombre": "Completo",
+        "descripcion": "Planos 2D con más detalles y renders 3D.",
+        "detalles": [
+          "Plano 2D detallado",
+          "Render básico 3D",
+          "Entrega en 5 días"
+        ]
+      },
+      {
+        "nombre": "Premium",
+        "descripcion": "Planos arquitectónicos completos con renders realistas.",
+        "detalles": [
+          "Planos 2D & 3D completos",
+          "Render realista",
+          "Entrega en 7 días"
+        ]
+      }
+    ]
+  },
+  {
+    "nombre": "Desarrollo Web",
+    "descripcion": "Creamos aplicaciones web modernas y funcionales.",
+    "planes": [
+      {
+        "nombre": "Básico",
+        "descripcion": "Sitio web sencillo.",
+        "detalles": [
+          "1 página web estática",
+          "Hosting no incluido",
+          "Entrega en 5 días"
+        ]
+      },
+      {
+        "nombre": "Completo",
+        "descripcion": "Sitio web dinámico con más funciones.",
+        "detalles": [
+          "Sitio web con funcionalidades avanzadas",
+          "Hosting incluido",
+          "Entrega en 10 días"
+        ]
+      },
+      {
+        "nombre": "Premium",
+        "descripcion": "Desarrollo web completo y personalizado.",
+        "detalles": [
+          "Aplicación web completa",
+          "Soporte y mantenimiento",
+          "Entrega en 15 días"
+        ]
+      }
+    ]
+  },
+  {
+    "nombre": "Diseño de Página Web",
+    "descripcion": "Diseño atractivo y optimizado para tu sitio web.",
+    "planes": [
+      {
+        "nombre": "Básico",
+        "descripcion": "Diseño web básico.",
+        "detalles": [
+          "1 diseño de página",
+          "Optimización básica",
+          "Entrega en 3 días"
+        ]
+      },
+      {
+        "nombre": "Completo",
+        "descripcion": "Diseño web más detallado.",
+        "detalles": [
+          "Diseño de varias páginas",
+          "Optimización avanzada",
+          "Entrega en 5 días"
+        ]
+      },
+      {
+        "nombre": "Premium",
+        "descripcion": "Diseño web completamente personalizado.",
+        "detalles": [
+          "Diseño único y profesional",
+          "SEO optimizado",
+          "Entrega en 7 días"
+        ]
+      }
+    ]
+  }
+]

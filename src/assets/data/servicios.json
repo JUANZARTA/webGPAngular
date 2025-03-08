@@ -1,0 +1,200 @@
+[
+    {
+        "nombre": "Animaciones 3D",
+        "descripcion": "Creamos animaciones 3D impactantes y profesionales para tu marca.",
+        "planes": [
+            {
+                "nombre": "Plan 1",
+                "descripcion": "Intro 3D Básica",
+                "detalles": [
+                    "Duración: 15 segundos",
+                    "Precio: 120",
+                    "Entregables: Animación en HD en formato MP4, MOV"
+                ]
+            },
+            {
+                "nombre": "Plan 2",
+                "descripcion": "Intro 3D Completa",
+                "detalles": [
+                    "Duración: 30 segundos",
+                    "Precio: 210",
+                    "Entregables: Animación en HD en el formato requerido"
+                ]
+            },
+            {
+                "nombre": "Plan 3",
+                "descripcion": "Intro 3D Profesional",
+                "detalles": [
+                    "Duración: 60 segundos o más",
+                    "Precio: 330",
+                    "Entregables: Animación en HD en el formato requerido + archivos editables"
+                ]
+            }
+        ]
+    },
+    {
+        "nombre": "Animaciones 2D",
+        "descripcion": "Dale vida a tus ideas con animaciones 2D dinámicas y creativas.",
+        "planes": [
+            {
+                "nombre": "Plan 1",
+                "descripcion": "Animación a Huesos",
+                "detalles": [
+                    "Duración: 15 segundos",
+                    "Precio: 100",
+                    "Entregables: Animación en HD en formato MP4, MOV"
+                ]
+            },
+            {
+                "nombre": "Plan 2",
+                "descripcion": "Animación Tradicional",
+                "detalles": [
+                    "Duración: 30 segundos",
+                    "Precio: 150",
+                    "Entregables: Animación en HD en el formato requerido + efectos de sonido"
+                ]
+            },
+            {
+                "nombre": "Plan 3",
+                "descripcion": "Animación Tradicional Avanzada",
+                "detalles": [
+                    "Duración: 60 segundos o más",
+                    "Precio: 240",
+                    "Entregables: Animación en HD en el formato requerido + archivos editables + efectos de sonido + ediciones adicionales"
+                ]
+            }
+        ]
+    },
+    {
+        "nombre": "Diseño de Personajes",
+        "descripcion": "Creamos personajes originales y detallados en diferentes estilos.",
+        "planes": [
+            {
+                "nombre": "Plan 1",
+                "descripcion": "Diseño de Personaje Estilo Caricatura",
+                "detalles": [
+                    "Perspectivas: 2",
+                    "Precio: 35",
+                    "Entregables: Archivo en alta calidad en formato PNG"
+                ]
+            },
+            {
+                "nombre": "Plan 2",
+                "descripcion": "Diseño de Personaje Estilo Anime",
+                "detalles": [
+                    "Perspectivas: 4",
+                    "Precio: 60",
+                    "Entregables: Archivo en alta calidad en formato PNG + PDF"
+                ]
+            },
+            {
+                "nombre": "Plan 3",
+                "descripcion": "Diseño de Personaje Anime Avanzado",
+                "detalles": [
+                    "Perspectivas: 6",
+                    "Precio: 100",
+                    "Entregables: Archivo en alta calidad en formato PNG + PDF"
+                ]
+            }
+        ]
+    },
+    {
+        "nombre": "Modelos 3D",
+        "descripcion": "Realizamos modelado y renderizado de objetos 3D con gran nivel de detalle.",
+        "planes": [
+            {
+                "nombre": "Plan 1",
+                "descripcion": "Modelado de Objeto Básico",
+                "detalles": [
+                    "Tipo: Básico",
+                    "Precio: 60",
+                    "Entregables: 2 renders en HD + archivo editable en Blender"
+                ]
+            },
+            {
+                "nombre": "Plan 2",
+                "descripcion": "Modelado de Objeto Detallado",
+                "detalles": [
+                    "Tipo: Detallado",
+                    "Precio: 100",
+                    "Entregables: 4 renders en HD + archivo editable en Blender"
+                ]
+            },
+            {
+                "nombre": "Plan 3",
+                "descripcion": "Modelado de Objeto con Fondo",
+                "detalles": [
+                    "Tipo: Detallado + Fondo",
+                    "Precio: 150",
+                    "Entregables: 6 renders en 4K + archivo editable en Blender"
+                ]
+            }
+        ]
+    },
+    {
+        "nombre": "Diseños Gráficos",
+        "descripcion": "Creación de diseños gráficos personalizados para diversas aplicaciones.",
+        "planes": [
+            {
+                "nombre": "Paquete 1",
+                "descripcion": "Diseños Básicos",
+                "detalles": [
+                    "Tipo: Tarjeta, flyer, etc.",
+                    "Precio: 12",
+                    "Entregables: 2 imágenes a medida"
+                ]
+            },
+            {
+                "nombre": "Paquete 2",
+                "descripcion": "Diseños Intermedios",
+                "detalles": [
+                    "Tipo: Tarjeta, flyer, etc.",
+                    "Precio: 20",
+                    "Entregables: 4 imágenes a medida"
+                ]
+            },
+            {
+                "nombre": "Paquete 3",
+                "descripcion": "Diseños Avanzados",
+                "detalles": [
+                    "Tipo: Tarjeta, flyer, etc.",
+                    "Precio: 30",
+                    "Entregables: 8 imágenes a medida"
+                ]
+            }
+        ]
+    },
+    {
+        "nombre": "Videos Publicitarios",
+        "descripcion": "Producción y edición de videos promocionales de alta calidad.",
+        "planes": [
+            {
+                "nombre": "Paquete 1",
+                "descripcion": "Video Básico",
+                "detalles": [
+                    "Duración: 15 segundos",
+                    "Precio: 20",
+                    "Entregables: 2 videos en HD"
+                ]
+            },
+            {
+                "nombre": "Paquete 2",
+                "descripcion": "Videos Completos",
+                "detalles": [
+                    "Duración: 30 segundos",
+                    "Precio: 40",
+                    "Entregables: 4 videos en HD"
+                ]
+            },
+            {
+                "nombre": "Paquete 3",
+                "descripcion": "Videos con Narración",
+                "detalles": [
+                    "Duración: 60 segundos",
+                    "Precio: 60",
+                    "Entregables: 8 videos en 4K"
+                ]
+            }
+        ]
+    }
+]

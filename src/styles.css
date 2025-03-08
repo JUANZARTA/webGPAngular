@@ -1,0 +1,10 @@
+/* Importar las utilidades de Tailwind */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.custom-orange-header {
+  background-color: darkslategray !important; /* Naranja intenso */
+  color: white !important; /* Texto blanco */
+}

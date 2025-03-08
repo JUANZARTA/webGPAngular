@@ -1,0 +1,22 @@
+<footer class="bg-white text-white py-5">
+  <div class="container text-center">
+    <!-- Título de Contacto -->
+    <h5>Contacto</h5>
+    <p>Si desea obtener más información o ponerse en contacto con nosotros, no dude en hacerlo a través de los siguientes medios.</p>
+
+    <!-- Iconos de Redes Sociales en fila horizontal -->
+    <div class="my-6">
+      <a *ngFor="let red of redesSociales" [href]="red.url" target="_blank" class="text-black mx-3">
+        <i [class]="red.icono + ' fa-2x'"></i>
+      </a>
+    </div>
+
+    <!-- Correo Electrónico -->
+    <p>Email: goldenpanda.kz&commat;gmail.com | Teléfono: +57 312 8622945</p>
+  </div>
+
+  <!-- Created by en la parte más baja -->
+  <div class="text-center mt-4">
+    <p class="created-by">© 2025 Created by <strong>Golden Panda</strong></p>
+  </div>
+</footer>

@@ -1,0 +1,21 @@
+<mat-toolbar color="primary" class="navbar">
+  <!-- Logo y nombre de la empresa -->
+  <img src="assets/logo.png" alt="Logo" width="40" style="margin-right: 10px;">
+  <h1 class="brand-name">Golden Panda</h1>
+
+  <span class="spacer"></span> <!-- Espaciador para alinear a la derecha -->
+
+  <!-- Botón de menú hamburguesa para móviles (ahora alineado a la derecha) -->
+  <button mat-icon-button (click)="toggleMenu()" class="menu-button">
+    <mat-icon>menu</mat-icon>
+  </button>
+
+  <!-- Menú de navegación -->
+  <div [class.active]="menuOpen" class="nav-links">
+    <button mat-button routerLink="/" (click)="closeMenu()">Inicio</button>
+    <button mat-button routerLink="/nosotros" (click)="closeMenu()">Nosotros</button>
+    <button mat-button routerLink="/portafolio" (click)="closeMenu()">Portafolio</button>
+    <button mat-button routerLink="/proceso" (click)="closeMenu()">Proceso</button>
+    <button mat-button routerLink="/contacto" (click)="closeMenu()">Contacto</button>
+  </div>
+</mat-toolbar>
