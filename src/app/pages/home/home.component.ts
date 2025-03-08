@@ -1,112 +1,89 @@
 import { Component, OnInit } from '@angular/core';
-import { MatButtonModule } from '@angular/material/button';
-import { RouterModule } from '@angular/router';
-import { MatIconModule } from '@angular/material/icon';
 import { CommonModule } from '@angular/common';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { RouterModule } from '@angular/router';
+import { SafeResourceUrl } from '@angular/platform-browser';
+
+// Importamos los modelos
+import { Service } from '../../models/service';
+import { Video } from '../../models/video';
+
+// Importamos los servicios
+import { CarouselService } from '../../services/carousel.service';
+import { ServicesService } from '../../services/servicios.service';
+import { VideoService } from '../../services/video.service';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, MatButtonModule, MatIconModule, HttpClientModule,RouterModule],
+  imports: [CommonModule, MatButtonModule, MatIconModule, RouterModule],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-
 export class HomeComponent implements OnInit {
-  videos: any[] = [];
-  selectedVideo: SafeResourceUrl | null = null;
-  // Lista de imágenes para el carrusel cargadas desde JSON
-  imagenes: any[] = [];
+  // Datos de Servicios
+  servicios: Service[] = [];
+  selectedService: Service | null = null; // Servicio seleccionado para el modal
 
-  // Lista de planes de servicios cargados desde JSON
-  servicios: any[] = [];
+  // Datos de Videos
+  videos: Video[] = [];
+  selectedVideo: SafeResourceUrl | null = null; // URL segura del video seleccionado
 
-  // Propiedad para almacenar el servicio seleccionado
-  selectedService: any = null;
-
-  // Inyectamos HttpClient para hacer la petición
-  constructor(private http: HttpClient, private sanitizer: DomSanitizer) {}
+  constructor(
+    private carouselService: CarouselService,
+    private servicesService: ServicesService,
+    private videoService: VideoService
+  ) {}
 
   ngOnInit() {
-    this.cargarImagenesCarrusel();
     this.cargarServicios();
     this.cargarVideos();
   }
 
-  // Método para cargar las imágenes del carrusel desde JSON
-  cargarImagenesCarrusel() {
-    if (this.imagenes.length === 0) { // Evita que se cargue de nuevo
-      this.http.get<any[]>('assets/data/carrusel.json').subscribe(
-        (data) => {
-          this.imagenes = data;
-          //console.log('Imágenes del carrusel cargadas:', this.imagenes);
-        },
-        (error) => {
-         // console.error('Error al cargar las imágenes del carrusel:', error);
-        }
-      );
-    }
-  }
 
-  // Método para cargar los servicios desde JSON
+
+  // Cargar servicios desde el servicio
   cargarServicios() {
-    if (this.servicios.length === 0) { // Evita que se vuelva a cargar si ya tiene datos
-      this.http.get<any[]>('assets/data/servicios.json').subscribe(
-        (data) => {
-          this.servicios = data;
-          //console.log('Servicios cargados:', this.servicios);
-        },
-        (error) => {
-          //console.error('Error al cargar servicios:', error);
-        }
-      );
-    }
-  }
-
-  // Método para seleccionar el servicio y actualizar el modal
-  selectService(service: any) {
-    this.selectedService = service;
-  }
-
-  cargarVideos() {
-    this.http.get<any[]>('assets/data/videos.json').subscribe(
+    this.servicesService.getServicios().subscribe(
       (data) => {
-        this.videos = data;
+        this.servicios = data;
       },
       (error) => {
-        console.error('Error al cargar los videos:', error);
+        console.error('Error al cargar servicios:', error);
       }
     );
   }
 
+  // Cargar videos desde el servicio
+  cargarVideos() {
+    this.videoService.getVideos().subscribe(
+      (data) => {
+        this.videos = data;
+      },
+      (error) => {
+        console.error('Error al cargar videos:', error);
+      }
+    );
+  }
+
+  // Método para seleccionar un servicio y mostrarlo en el modal
+  selectService(service: Service) {
+    this.selectedService = service;
+  }
+
+  // Método para abrir el modal del video
   abrirModalVideo(titulo: string) {
-    console.log("🔍 Título recibido:", titulo);
+    console.log("🔍 Buscando video para:", titulo);
 
     const videoData = this.videos.find(v => v.titulo.trim().toLowerCase() === titulo.trim().toLowerCase());
 
     if (videoData) {
       console.log("✅ Video encontrado:", videoData);
-      this.selectedVideo = this.sanitizer.bypassSecurityTrustResourceUrl(this.getEmbedUrl(videoData.video));
+      this.selectedVideo = this.videoService.getEmbedUrl(videoData.video);
     } else {
       console.warn("⚠️ No se encontró un video disponible para:", titulo);
       this.selectedVideo = null;
     }
   }
-
-  getEmbedUrl(videoUrl: string): string {
-    console.log("🎥 URL Original:", videoUrl);
-    const videoIdMatch = videoUrl.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([^&]+)/);
-
-    if (videoIdMatch) {
-      const embedUrl = `https://www.youtube.com/embed/${videoIdMatch[1]}`;
-      console.log("🔗 Embed URL:", embedUrl);
-      return embedUrl;
-    } else {
-      console.warn("⚠️ URL de YouTube inválida:", videoUrl);
-      return "";
-    }
-  }
-
 }

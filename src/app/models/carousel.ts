@@ -1,4 +1,5 @@
-export interface CarouselImage {
-  src: string;
+export interface CarouselItem {
+  id: number;
+  url: string;
   alt: string;
 }

@@ -1,1 +1,8 @@
-<p>carousel works!</p>
+<div id="carouselExample" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="1000">
+    <div class="carousel-inner">
+      <div *ngFor="let imagen of imagenes; let i = index" class="carousel-item" [ngClass]="{ 'active': i === 0 }" data-bs-interval="4000">
+        <img [src]="imagen.url" [alt]="imagen.alt" class="rounded-lg w-full">
+      </div>
+    </div>
+  </div>
+  
